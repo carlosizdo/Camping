@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegador"
+    app:startDestination="@id/listaCamps">
+
+    <fragment
+        android:id="@+id/detalleCamps"
+        android:name="com.example.campingscv.DetalleCamps"
+        android:label="DETALLE CAMPING"
+        tools:layout="@layout/fragment_detalle_camps" >
+        <action
+            android:id="@+id/action_detalleCamps_to_listaCamps"
+            app:destination="@id/listaCamps" />
+        <action
+            android:id="@+id/action_detalleCamps_to_listaCampingFavs"
+            app:destination="@id/listaCampingFavs" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaCamps"
+        android:name="com.example.campingscv.ListaCamps"
+        android:label="CAMPINGS DE LA C.V."
+        tools:layout="@layout/fragment_lista_camps" >
+        <action
+            android:id="@+id/action_listaCamps_to_detalleCamps"
+            app:destination="@id/detalleCamps" />
+        <action
+            android:id="@+id/action_listaCamps_to_listaCampingFavs"
+            app:destination="@id/listaCampingFavs" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaCampingFavs"
+        android:name="com.example.campingscv.ListaCampingFavs"
+        android:label="CAMPINGS FAVORITOS" >
+        <action
+            android:id="@+id/action_listaCampingFavs_to_detalleCamps"
+            app:destination="@id/detalleCamps" />
+    </fragment>
+</navigation>

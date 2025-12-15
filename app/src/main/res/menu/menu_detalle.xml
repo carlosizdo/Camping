@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_view_map"
+        android:title="Ver Mapa"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_visit_website"
+        android:title="Visitar Sitio Web"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_favoritos"
+        android:icon="@drawable/ic_star_outline"
+        android:title="Favoritos"
+        app:showAsAction="always" />
+
+</menu>

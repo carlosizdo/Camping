@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Opción para ordenar A-Z -->
+    <item
+        android:id="@+id/menu_sort_az"
+        android:title="Ordenar A-Z"
+        app:showAsAction="never" />
+
+    <!-- Opción para ordenar Z-A -->
+    <item
+        android:id="@+id/menu_sort_za"
+        android:title="Ordenar Z-A"
+        app:showAsAction="never" />
+
+    <!-- Opción para ordenar por número de plazas -->
+    <item
+        android:id="@+id/menu_sort_by_plazas"
+        android:title="Ordenar por Plazas"
+        app:showAsAction="never" />
+
+</menu>

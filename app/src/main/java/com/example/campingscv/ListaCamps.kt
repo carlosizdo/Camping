@@ -48,7 +48,12 @@ class ListaCamps : Fragment() {
         binding = FragmentListaCampsBinding.inflate(inflater, container, false)
         CoroutineScope(Dispatchers.Main).launch {
             datosCamps= withContext(Dispatchers.IO) {
-                getDataInternet()
+                // Si no hay conexión o la API falla, se usa la copia local de los datos
+                try {
+                    getDataInternet()
+                } catch (e: Exception) {
+                    getData()
+                }
             }
             originalList = datosCamps.toMutableList()
             myAdapter.updateData(datosCamps)
